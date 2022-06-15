@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - 'dockerfile/**'
+    - 'hello-service/**'
     - '.github/workflows/hello-service-AutoDeployTrigger-8eb0f378-69c7-4b60-a85b-5b4230ae447c.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: caa3d4e652a0acr.azurecr.io/hello-service:${{ github.sha }}
-          file: ./dockerfile/Dockerfile
-          context: ./dockerfile/
+          file: ./hello-service/Dockerfile
+          context: ./hello-service/
 
 
   deploy:
